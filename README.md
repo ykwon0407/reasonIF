@@ -1,4 +1,4 @@
-# ReasonIF
+# ReasonIF: Large Reasoning Models Fail to Follow Instructions During Reasoning
 
 <p align="center">
   <img src="figures/reasonIF_main.png" width="500">
