@@ -8,15 +8,17 @@
 
 **TL;DR:** It’s critical that LLMs follow user instructions. While prior studies assess instruction adherence in the model’s main responses, we argue that it is also important for large reasoning models (LRMs) to follow user instructions throughout their reasoning process. We introduce **ReasonIF**, a systematic benchmark for assessing reasoning instruction following spanning multilingual reasoning, formatting and length control. We find frontier LRMs, including GPT-OSS-120B, Qwen3-235B, and DeepSeek-R1, fail to follow reasoning instructions more than 75% of time. Notably, as task difficulty increases, reasoning instruction following degrades further. We also explore two strategies to enhance reasoning instruction fidelity: (1) multi-turn reasoning and (2) Reasoning Instruction Finetuning (RIF) using synthetic data. RIF improves the IFS of GPT-OSS-20B from 0.11 to 0.27, indicating measurable progress but leaving ample room for improvement.
 
-<p align="center">
+<div align="center">
+
 | Resource |
 |:---:|
 | [🤗 Hugging Face](https://huggingface.co/datasets/ykwon-hf/reasonIF) |
 | 📄 arXiv (will be updated soon) |
 | 🌐 Blog (will be updated soon) |
-</p>
 
-## Main results
+</div>
+
+## Key results
 
 <p align="center">
   <img src="figures/overall_comparison.png" width="500">
@@ -61,6 +63,11 @@ Results are saved to `outputs/[model-name]/`:
 - `eval_results.json`: Evaluation metrics including instruction following accuracy
 
 We also include a simple result in the `outputs` folder. They are generatd from `DeepSeek-R1-Distill-Qwen-14B`.
+
+## Citation
+
+(will be updated soon!)
+
 
 
 
