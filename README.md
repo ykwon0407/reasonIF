@@ -54,7 +54,7 @@ python -m src.main --model_name "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B" # mod
 python -m src.eval_core --model_name "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B"  # model_name should be compatible with vLLM.
 ```
 
-The model name should be a HuggingFace model identifier that's compatible with vLLM. See [vLLM documentation]([https://docs.vllm.ai/en/latest/models/supported_models.html](https://docs.vllm.ai/en/latest/models/supported_models.html#list-of-text-only-language-models)) for full model support.
+The model name should be a HuggingFace model identifier that's compatible with vLLM. See [vLLM documentation](https://docs.vllm.ai/en/latest/models/supported_models.html#list-of-text-only-language-models) for full model support.
 
 ## Output
 
