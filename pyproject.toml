@@ -1,0 +1,62 @@
+[project]
+name = "reasoning-if"
+version = "0.1.0"
+description = "Reasoning Instruction Following Evaluation Framework"
+readme = "README.md"
+authors = [
+    { name = "Reasoning IF Team" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    # LLM interface (local GPU inference)
+    "vllm>=0.3.0",
+    "torch>=2.0.0",
+    "transformers>=4.36.0",
+    # Core dependencies
+    "datasets>=2.10.0",
+    # Math evaluation
+    "sympy>=1.11.0",
+    "pylatexenc>=2.10",
+    # Utilities
+    "numpy>=1.21.0",
+    "pandas>=1.5.0",
+    "tqdm>=4.64.0",
+    # Constraint checking dependencies
+    "fast-langdetect>=0.3.2",
+    "nltk>=3.8",
+    "immutabledict>=2.0.0",
+    "packaging>=21.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+    "mypy>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+    "mypy>=1.0.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[project.scripts]
+reasoning-if = "src.main:main"
