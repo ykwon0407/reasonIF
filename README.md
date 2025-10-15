@@ -1,7 +1,28 @@
 # ReasonIF
 
-A systematic benchmark for assessing large reasoning models' reasoning instruction following capability. We find substantial failures in reasoning instruction adherence: the highest instruction following score (IFS) remains below 0.25, meaning that fewer than 25\% of reasoning traces comply with the given instructions. Notably, as task difficulty increases, reasoning instruction following degrades further. We also explore two strategies to enhance reasoning instruction fidelity: (1) multi-turn reasoning and (2) Reasoning Instruction Finetuning (RIF) using synthetic data. RIF improves the IFS of GPT-OSS-20B from 0.11 to 0.27, indicating measurable progress but leaving ample room for improvement.
+<p align="center">
+  <img src="figures/reasonIF_main.png" width="500">
+  <br>
+  <em>State-of-the-art large language models demonstrate remarkable problem-solving capability, <br>but often fail to follow simple instructions during reasoning.</em>
+</p>
 
+**TL;DR:** It’s critical that LLMs follow user instructions. While prior studies assess instruction adherence in the model’s main responses, we argue that it is also important for large reasoning models (LRMs) to follow user instructions throughout their reasoning process. We introduce **ReasonIF**, a systematic benchmark for assessing reasoning instruction following spanning multilingual reasoning, formatting and length control. We find frontier LRMs, including GPT-OSS-120B, Qwen3-235B, and DeepSeek-R1, fail to follow reasoning instructions more than 75% of time. Notably, as task difficulty increases, reasoning instruction following degrades further. We also explore two strategies to enhance reasoning instruction fidelity: (1) multi-turn reasoning and (2) Reasoning Instruction Finetuning (RIF) using synthetic data. RIF improves the IFS of GPT-OSS-20B from 0.11 to 0.27, indicating measurable progress but leaving ample room for improvement.
+
+<p align="center">
+| Resource |
+|:---:|
+| [🤗 Hugging Face](https://huggingface.co/datasets/ykwon-hf/reasonIF) |
+| 📄 arXiv (will be updated soon) |
+| 🌐 Blog (will be updated soon) |
+</p>
+
+## Main results
+
+<p align="center">
+  <img src="figures/overall_comparison.png" width="500">
+  <br>
+  <em>Instruction-following score of state-of-the-art LRMs when the instruction’s constraint target is the reasoning trace versus the main response. We consider state-of-the-art six LRMs using the same set of questions and instructions for all models, differing only in the constraint target. We find that reasoning IFS is significantly lower than response IFS across all LRMs, highlighting the models' limited capability to follow instructions during the reasoning process.</em>
+</p>
 
 ## Datasets
 
@@ -30,6 +51,8 @@ python -m src.main --model_name "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B" # mod
 ```bash
 python -m src.eval_core --model_name "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B"  # model_name should be compatible with vLLM.
 ```
+
+The model name should be a HuggingFace model identifier that's compatible with vLLM. See [vLLM documentation]([https://docs.vllm.ai/en/latest/models/supported_models.html](https://docs.vllm.ai/en/latest/models/supported_models.html#list-of-text-only-language-models)) for full model support.
 
 ## Output
 
