@@ -8,22 +8,22 @@
 
 **TL;DR:** It’s critical that LLMs follow user instructions. While prior studies assess instruction adherence in the model’s main responses, we argue that it is also important for large reasoning models (LRMs) to follow user instructions throughout their reasoning process. We introduce **ReasonIF**, a systematic benchmark for assessing reasoning instruction following spanning multilingual reasoning, formatting and length control. **We find frontier LRMs, including GPT-OSS-120B, Qwen3-235B, and DeepSeek-R1, fail to follow reasoning instructions more than 75% of time.** Notably, as task difficulty increases, reasoning instruction following degrades further. We also explore two strategies to enhance reasoning instruction fidelity: (1) multi-turn reasoning and (2) Reasoning Instruction Finetuning (RIF) using synthetic data. RIF improves the IFS of GPT-OSS-20B from 0.11 to 0.27, indicating measurable progress but leaving ample room for improvement.
 
-<div align="center">
+<p align="center">
+  <a href="https://huggingface.co/datasets/ykwon-hf/reasonIF">
+    <img alt="Hugging Face" src="https://img.shields.io/badge/Dataset-Hugging%20Face%20🤗-yellow">
+  </a>
+  <a href="https://arxiv.org/pdf/2510.15211.pdf">
+    <img alt="Paper URL" src="https://img.shields.io/badge/arXiv-2510.15211-blue">
+  </a>
+</p>
 
-| Resource |
-|:---:|
-| [🤗 Hugging Face](https://huggingface.co/datasets/ykwon-hf/reasonIF) |
-| 📄 arXiv (will be updated soon) |
-| 🌐 Blog (will be updated soon) |
-
-</div>
 
 ## Key results
 
 <p align="center">
   <img src="figures/overall_comparison.png" width="500">
   <br>
-  <em>Figure 1. Instruction-following score of state-of-the-art LRMs when the instruction’s constraint target is the reasoning trace versus the main response. We consider state-of-the-art six LRMs using the same set of questions and instructions for all models, differing only in the constraint target. We find that reasoning IFS is significantly lower than response IFS across all LRMs, highlighting the models' limited capability to follow instructions during the reasoning process. More results are provided in the paper.</em>
+  <em>Figure 1. Instruction-following score of state-of-the-art LRMs when the instruction’s constraint target is the reasoning trace versus the main response. We evaluate six state-of-the-art LRMs with the same set of questions and instructions for all models, differing only in the constraint target. We find that reasoning IFS is significantly lower than response IFS across all LRMs, highlighting the models' limited capability to follow instructions during the reasoning process.</em>
 </p>
 
 ## Datasets
@@ -66,8 +66,17 @@ We also include a simple result in the `outputs` folder. They are generatd from 
 
 ## Citation
 
-(will be updated soon!)
-
-
+```
+@article{kwon2025reasonif,
+  title        = {ReasonIF: Large Reasoning Models Fail to Follow Instructions During Reasoning},
+  author       = {Yongchan Kwon and Shang Zhu and Federico Bianchi and Kaitlyn Zhou and James Zou},
+  year         = {2025},
+  journal      = {arXiv preprint arXiv:2510.15211},
+  archivePrefix= {arXiv},
+  eprint       = {2510.15211},
+  primaryClass = {cs.LG},
+  note         = {Preprint — submitted October 17, 2025}
+}
+```
 
 
