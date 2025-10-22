@@ -15,6 +15,9 @@
   <a href="https://arxiv.org/pdf/2510.15211.pdf">
     <img alt="Paper URL" src="https://img.shields.io/badge/arXiv-2510.15211-blue">
   </a>
+  <a href="https://www.together.ai/blog/large-reasoning-models-fail-to-follow-instructions-during-reasoning-a-benchmark-study">
+    <img alt="Paper URL" src="https://img.shields.io/badge/Blog-Together%20AI-red">
+  </a>
 </p>
 
 
